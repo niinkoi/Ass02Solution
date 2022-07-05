@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BusinessObject
 {
-    public class OrderDetailObject
+    public class OrderDetailObject : AbstractEntity<int>
     {
         [Column(TypeName = "money")]
         public decimal UnitPrice { get; set; }

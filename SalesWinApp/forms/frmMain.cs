@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BusinessObject;
+using SalesWinApp.commons;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,8 @@ namespace SalesWinApp
 {
     public partial class frmMain : Form
     {
+        public static CurrentSession? currentSession { get; set; }
+
         public frmMain()
         {
             InitializeComponent();

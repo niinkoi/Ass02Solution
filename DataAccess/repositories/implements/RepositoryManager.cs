@@ -8,16 +8,15 @@ namespace DataAccess.repositories.implements
 {
     public class RepositoryManager : IRepositoryManager
     {
-        private RepositoryContext _repositoryContext;
+        private RepositoryContext _repositoryContext = new RepositoryContext();
 
         private IMemberRepository _memberRepository;
         private IOrderRepository _orderRepository;
         private IOrderDetailRepository _orderDetailRepository;
         private IProductRepository _productRepository;
 
-        public RepositoryManager(RepositoryContext repositoryContext)
+        public RepositoryManager()
         {
-            _repositoryContext = repositoryContext;
         }
 
         public IMemberRepository Member

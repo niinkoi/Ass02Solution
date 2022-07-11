@@ -1,3 +1,6 @@
+using AutoMapper;
+using SalesWinApp.commons;
+
 namespace SalesWinApp
 {
     internal static class Program
@@ -11,7 +14,12 @@ namespace SalesWinApp
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new frmLogin());
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile(new MappingProfile());
+            });
+            var mapper = config.CreateMapper();
+            Application.Run(new frmMain(mapper));
         }
     }
 }

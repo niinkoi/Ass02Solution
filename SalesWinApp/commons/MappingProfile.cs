@@ -1,0 +1,20 @@
+﻿using AutoMapper;
+using BusinessObject;
+using SalesWinApp.raws;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SalesWinApp.commons
+{
+    public class MappingProfile : Profile
+    {
+        public MappingProfile()
+        {
+            CreateMap<MemberObject, MemberRaw>();
+            CreateMap<MemberRaw, MemberObject>();
+        }
+    }
+}

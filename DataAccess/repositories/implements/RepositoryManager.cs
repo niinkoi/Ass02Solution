@@ -68,5 +68,7 @@ namespace DataAccess.repositories.implements
         }
 
         public void Save() => _repositoryContext.SaveChanges();
+
+        public void RemoveTracker() => _repositoryContext.ChangeTracker.Clear();
     }
 }

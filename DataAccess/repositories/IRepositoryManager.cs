@@ -13,5 +13,6 @@ namespace DataAccess.repositories
         IOrderDetailRepository OrderDetail { get; }
         IProductRepository Product { get; }
         void Save();
+        void RemoveTracker();
     }
 }

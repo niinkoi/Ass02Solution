@@ -32,7 +32,7 @@ namespace SalesWinApp
             var found = GetCurrentUser(txtEmail.Text, txtPassword.Text);
             if (found == null)
             {
-                MessageBox.Show("haha");
+                MaterialMessageBox.Show("Invalid Account");
             }
             else
             {
@@ -40,11 +40,13 @@ namespace SalesWinApp
                 if (found.Email.Equals(_service.RetrieveDefaultAccount("Email")))
                 {
                     frmMain.currentSession.Role = commons.RoleBased.Admin;
+                    frmMain.currentSession.MemberInfo.ID = -1;
                 }
                 else
                 {
                     frmMain.currentSession.Role = commons.RoleBased.User;
                 }
+                Close();
             }
         }
 

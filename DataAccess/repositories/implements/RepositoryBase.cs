@@ -30,5 +30,6 @@ namespace DataAccess.repositories.implements
         public void Update(TEntity entity) => RepositoryContext.Set<TEntity>().Update(entity);
 
         public void Delete(TEntity entity) => RepositoryContext.Set<TEntity>().Remove(entity);
+
     }
 }
